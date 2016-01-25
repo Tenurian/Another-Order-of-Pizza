@@ -7,17 +7,7 @@ body * {
     border: 1px solid black;
 }
 
-nav {
-    padding: 10px;
-    width: 95%;
-    min-width: 1140px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    height: 100px;
-}
+
 
 #creation {
     padding: 10px;
@@ -48,4 +38,35 @@ footer {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
+}
+
+
+#logo {
+    background-image: url(images/logo.png);
+    height: 84px;
+    width: 94px;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+#centeringDiv {
+    width: 100%;
+}
+
+#centeringDiv {
+    background-image: url(images/wood.jpg);
+    height: 100px;
+    width: 1280px;
+    margin: auto;
+    background-repeat: no-repeat;
+}
+/*
+    padding: 10px;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    
+*/
 }
