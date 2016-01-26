@@ -11,11 +11,7 @@ body {
 }
 
 .focus {
-<<<<<<< HEAD
-    margin-top: 10px;
-=======
     margin-top: 30px;
->>>>>>> fa3c0fff2b8580afe0d8fd7b3b4271745d7bf770
     height: 562.5px;
 }
 
@@ -24,31 +20,10 @@ body {
     float: left;
 }
 
-<<<<<<< HEAD
-input[type="checkbox"] {
-    width: 24px;
-    height: 24px;
-    vertical-align: bottom;
-}
-label.checkbox {
-    vertical-align: top;
-    line-height: 24px;
-    margin: 2px 0;
-    display: block;
-    height: 22px;
-}
-
-=======
->>>>>>> fa3c0fff2b8580afe0d8fd7b3b4271745d7bf770
 #list {
     background: #323232;
     float: right;
     width: 24%;
-}
-
-#bottomLeft {
-    height: 100px;
-    width: 1125px;
 }
 
 #pizza {
@@ -56,7 +31,7 @@ label.checkbox {
     float: left;
     width: 50%;
     height: 100%;
-    background-image: url(images/pizzaCrust.png);
+    background-image: url(images/pizzaJustCrust.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
