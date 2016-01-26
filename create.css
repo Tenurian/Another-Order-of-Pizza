@@ -11,6 +11,7 @@ body {
 }
 
 #pizza {
+    background-color: #313131;
     float: left;
     width: 45%;
     height: 600px;
