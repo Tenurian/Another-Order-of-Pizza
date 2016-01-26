@@ -1,10 +1,6 @@
-body * {
-    border: 1px solid red;
-}
-
 #content {
     margin: 0 auto;
-    width: 1280px;
+    width: 1500px;
     height: 100%;
 }
 
@@ -12,28 +8,39 @@ body {
     background-color: white;
 }
 
-#creation {
-    margin: auto;
+.focus {
     margin-top: 100px;
-    width: inherit;
-    height: 600px;
+    height: 562.5px;
+}
+
+#creation {
+    width: 75%;
+    float: left;
+}
+
+#list {
+    background: #323232;
+    float: right;
+    width: 24%;
 }
 
 #pizza {
     background-color: #313131;
     float: left;
-    width: 49%;
-    height: 600px;
+    width: 50%;
+    height: 100%;
     background-image: url(images/pizzaJustCrust.jpg);
     background-repeat: no-repeat;
-    border: 1px solid black;
+    background-size: cover;
+    background-position: center;
+/*    border: 1px solid black;*/
 }
 
 .toppings {
     float: right;
-    width: 49%;
+    width: 49.9%;
     height: 100%;
-    border: 1px solid black;
+    background: #a1a1a1;
 }
 
 #logo {
