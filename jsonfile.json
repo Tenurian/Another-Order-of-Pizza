@@ -6,7 +6,8 @@
     },
         {
             "name": "pepperoni",
-            "price": "1.00"
+            "price": "1.00",
+            "image": "images/logo.png"
     },
         {
             "name": "sausage",
@@ -37,7 +38,7 @@
             "price": "1.00"
     },
         {
-            "name": "ham",
+            "name": "chicken",
             "price": "1.00"
     }
   ]

@@ -35,7 +35,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
     /*    border: 1px solid black;*/
+}
+
+#myImg {
+    margin: auto;
 }
 
 .toppings {
@@ -49,7 +55,7 @@ body {
 #logo {
     background-image: url(images/logo.png);
     height: 84px;
-    width: 94px;
+    width: 515px;
     background-repeat: no-repeat;
     margin: auto;
 }
@@ -70,6 +76,11 @@ pt2 {
     width: 49%;
     float: left;
     display: table-row;
+}
+
+#pizzaSizes {
+    width: 200ps;
+    height: 200px;
 }
 
 input {
