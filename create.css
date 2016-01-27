@@ -64,17 +64,24 @@ body {
     background-repeat: no-repeat;
 }
 
-#Specialties {
-    float: right;
-    margin: auto;
-    height: 200px;
-    width: 1500px;
-    background-color: aqua
+#pt1,
+pt2 {
+    height: 600px;
+    width: 49%;
+    float: left;
+    display: table-row;
 }
 
-.box {
-    text-align: center;
-    height: 100px;
-    width: 110px;
-    float: left;
+input {
+    width: 20px;
+    position: relative;
+    left: 200px;
+    vertical-align: middle;
+}
+
+label {
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
 }
