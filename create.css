@@ -81,6 +81,7 @@ pt2 {
 #pizzaSizes {
     width: 200ps;
     height: 200px;
+    float: left''
 }
 
 input {
