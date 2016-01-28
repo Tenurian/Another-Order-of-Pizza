@@ -100,15 +100,12 @@ pt2 {
     height: 344px;
 }
 
-#toppingSelect input {
-    width: 20px;
-    position: relative;
-    left: 200px;
-    vertical-align: middle;
+#toppingSelect select {
+    border-radius: 10px;
 }
 
 #toppingSelect label {
-    width: 200px;
+    width: 150px;
     position: relative;
     display: inline-block;
     vertical-align: middle;
