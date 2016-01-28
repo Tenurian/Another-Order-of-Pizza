@@ -35,7 +35,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
     /*    border: 1px solid black;*/
+}
+
+#myImg {
+    margin: auto;
 }
 
 .toppings {
@@ -49,7 +55,7 @@ body {
 #logo {
     background-image: url(images/logo.png);
     height: 84px;
-    width: 94px;
+    width: 515px;
     background-repeat: no-repeat;
     margin: auto;
 }
@@ -72,6 +78,12 @@ pt2 {
     display: table-row;
 }
 
+#pizzaSizes {
+    width: 200ps;
+    height: 200px;
+    float: left;
+}
+
 input {
     width: 20px;
     position: relative;
@@ -84,4 +96,12 @@ label {
     position: relative;
     display: inline-block;
     vertical-align: middle;
+}
+
+#toppingDIv {
+    height: 410px;
+    width: 400px;
+    margin: auto;
+    background-image: url(images/baconFull.png);
+    background-repeat: no-repeat;
 }
