@@ -81,7 +81,7 @@ pt2 {
 #pizzaSizes {
     width: 200ps;
     height: 200px;
-    float: left''
+    float: left;
 }
 
 input {
@@ -96,4 +96,12 @@ label {
     position: relative;
     display: inline-block;
     vertical-align: middle;
+}
+
+#toppingDIv {
+    height: 410px;
+    width: 400px;
+    margin: auto;
+    background-image: url(images/baconFull.png);
+    background-repeat: no-repeat;
 }
