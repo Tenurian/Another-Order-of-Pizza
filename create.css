@@ -44,8 +44,7 @@ body {
     margin: auto;
 }
 
-.toppings {
-    text-align: center;
+.toppingSide {
     float: right;
     width: 49.9%;
     height: 100%;
@@ -78,30 +77,39 @@ pt2 {
     display: table-row;
 }
 
-#pizzaSizes {
-    width: 200ps;
-    height: 200px;
-    float: left;
-}
-
-input {
-    width: 20px;
-    position: relative;
-    left: 200px;
-    vertical-align: middle;
-}
-
-label {
-    width: 200px;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-}
-
 #toppingDIv {
     height: 410px;
     width: 400px;
     margin: auto;
     background-image: url(images/baconFull.png);
     background-repeat: no-repeat;
+}
+
+.toppingSide > div {
+    border-bottom: 1px solid black;
+    float: left;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: green;
+}
+
+#toppingSelect > div {
+    float: left;
+    width: 49%;
+    height: 344px;
+}
+
+#toppingSelect input {
+    width: 20px;
+    position: relative;
+    left: 200px;
+    vertical-align: middle;
+}
+
+#toppingSelect label {
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
 }
