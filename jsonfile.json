@@ -2,44 +2,53 @@
     "toppings": [
         {
             "name": "cheese",
-            "price": "1.00"
+            "price": "1.00",
+            "image": "images/cheeseFull.png"
     },
         {
             "name": "pepperoni",
             "price": "1.00",
-            "image": "images/logo.png"
+            "image": "images/pepporoniFull.png"
     },
         {
             "name": "sausage",
-            "price": "1.00"
+            "price": "1.00",
+            "image": "images/sausageFull.png"
     },
         {
             "name": "pineapple",
-            "price": "1.00"
+            "price": "1.00",
+            "image": "images/pinneappleFull.png"
     },
         {
             "name": "bacon",
-            "price": "1.00"
+            "price": "1.00",
+            "image": "images/baconFull.png"
     },
         {
             "name": "black olives",
-            "price": "1.00"
+            "price": "1.00",
+            "image": "images/blackOlivesFull.png"
     },
         {
             "name": "mushrooms",
-            "price": "1.00"
+            "price": "1.00",
+            "image": "images/mushroomsFull.png"
     },
         {
             "name": "green peppers",
-            "price": "1.00"
+            "price": "1.00",
+            "image": "images/greenPeppersFull.png"
     },
         {
             "name": "onions",
-            "price": "1.00"
+            "price": "1.00",
+            "image": "images/onionsFull.png"
     },
         {
             "name": "chicken",
-            "price": "1.00"
+            "price": "1.00",
+            "image": "images/chickenFull.png"
     }
   ]
 }
