@@ -1,5 +1,4 @@
 #Page {
-    background-color: red;
     margin: auto;
     width: 1500px;
     height: 900px;
@@ -27,7 +26,6 @@ body {
 }
 
 #pizza {
-    background-color: #313131;
     float: left;
     width: 50%;
     height: 100%;
@@ -46,9 +44,9 @@ body {
 
 .toppingSide {
     float: right;
-    width: 49.9%;
+    width: 49%;
     height: 100%;
-    background: #a1a1a1;
+    border: 1px solid black;
 }
 
 #logo {
@@ -86,12 +84,10 @@ pt2 {
 }
 
 .toppingSide > div {
-    border-bottom: 1px solid black;
     float: left;
     text-align: center;
     width: 100%;
     height: auto;
-    background-color: green;
 }
 
 #toppingSelect > div {
