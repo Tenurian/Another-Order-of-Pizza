@@ -6,6 +6,10 @@
 
 body {
     background-color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 .focus {
@@ -41,82 +45,68 @@ body {
 #specialtyPizzas {
     background-color: black;
     height: 50px;
-    width: 1500px;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
-#spicyItalian {
+#centerwrapper {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.specialty {
     background-color: aqua;
     height: 50px;
     width: 150px;
     text-align: center;
-    margin-right: 5px;
+    margin: 0 2.5px;
     float: left;
     display: flex;
     align-items: center;
+    
+    cursor: pointer;
 }
 
-#spicyItalianText {
-    margin: auto;
+@keyframes darken {
+    from{
+        color: black;
+        background: aqua;
+    }
+    
+    to {
+        color: white;
+        background: rgb(0, 128, 128);
+    }
 }
 
-#worksPizza {
-    background-color: aqua;
-    height: 50px;
-    width: 150px;
+.specialty:hover{
+    animation-name: darken;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes lighten {
+    from{
+        color: white;
+        background: rgb(0, 128, 128);
+    }
+    
+    to {
+        color: black;
+        background: aqua;
+    }
+}
+.specialty:not(hover) {
+    animation-name: lighten;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.specialty div {
     text-align: center;
-    margin-right: 5px;
-    float: left;
-    display: flex;
-    align-items: center;
-}
-
-#worksText {
-    margin: auto;
-}
-
-#veggiePizza {
-    background-color: aqua;
-    height: 50px;
-    width: 150px;
-    text-align: center;
-    margin-right: 5px;
-    float: left;
-    display: flex;
-    align-items: center;
-}
-
-#veggieText {
-    margin: auto;
-}
-
-#meatLoverPizza {
-    background-color: aqua;
-    height: 50px;
-    width: 150px;
-    text-align: center;
-    margin-right: 5px;
-    float: left;
-    display: flex;
-    align-items: center;
-}
-
-#meatLoverText {
-    margin: auto;
-}
-
-#bbqChickenPizza {
-    background-color: aqua;
-    height: 50px;
-    width: 150px;
-    text-align: center;
-    margin-right: 5px;
-    float: left;
-    display: flex;
-    align-items: center;
-}
-
-#bbqChickenText {
     margin: auto;
 }
 
@@ -137,6 +127,11 @@ body {
     width: 515px;
     background-repeat: no-repeat;
     margin: auto;
+    /* for the dropshadow on the logo */
+    -webkit-filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.75));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#000')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#000')";
 }
 
 #Header {
@@ -158,16 +153,6 @@ body {
     display: table-row;
 }
 
-/*
-#pt1 {
-    background-color: bisque;
-}
-
-#pt2 {
-    background-color: cadetblue;
-}
-*/
-
 #toppingDIv {
     height: 410px;
     width: 400px;
@@ -183,10 +168,8 @@ body {
     height: auto;
 }
 
-#toppingSelect > div {
-/*    float: left;*/
-/*    width: 49%;*/
-/*    height: 344px;*/
+#toppingSelect * {
+    text-align: center;
 }
 
 #toppingSelect select {
@@ -200,7 +183,15 @@ body {
     vertical-align: middle;
 }
 
-
 span {
     float: right;
+    padding-right: 25px;
+}
+
+#pizzaSizes {
+    text-align: center;
+}
+
+#sauces {
+    text-align: center;
 }
