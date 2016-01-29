@@ -81,7 +81,7 @@ pt2 {
     height: 410px;
     width: 400px;
     margin: auto;
-    background-image: url(images/baconFull.png);
+    background-image: url(images/pinneappleFull.png), url(images/baconFull.png);
     background-repeat: no-repeat;
 }
 
@@ -105,7 +105,7 @@ pt2 {
 }
 
 #toppingSelect label {
-    width: 150px;
+    width: 110px;
     position: relative;
     display: inline-block;
     vertical-align: middle;
