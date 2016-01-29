@@ -41,13 +41,20 @@ function capitalizeFirstLetter(string) {
 
 $(".topping").change(function () {
     var list = document.getElementById("list"),
-        content = "<ul>";
+        content = "<ul>",
+        i, cost;
     console.log("topping was changed");
     $.each($(".topping"), function(index, value){
         console.log(value.value);
         if(value.value !== "none"){
             console.log(value.name);
-            content += "<li>" + value.name + "</li>";
+            for(i = 0; i < my_JSON_object.toppings.length; i++){
+                if(capitalizeFirstLetter(my_JSON_object.toppings[i].name) === value.name){
+                    cost = my_JSON_object.toppings[i].price;
+                    i = my_JSON_object.toppings.length + 1;
+                }
+            }
+            content += "<li>" + value.name + "<span>$" + cost + "</span></li>";
         }
     });
     

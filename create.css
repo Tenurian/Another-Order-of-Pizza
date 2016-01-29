@@ -20,6 +20,7 @@ body {
 }
 
 #list {
+    color: white;
     background: #323232;
     float: right;
     width: 24%;
@@ -105,4 +106,8 @@ pt2 {
     position: relative;
     display: inline-block;
     vertical-align: middle;
+}
+
+span {
+    float: right;
 }
