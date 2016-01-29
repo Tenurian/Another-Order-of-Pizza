@@ -1,5 +1,4 @@
 #Page {
-    background-color: red;
     margin: auto;
     width: 1500px;
     height: 725px;
@@ -27,7 +26,6 @@ body {
 }
 
 #pizza {
-    background-color: #313131;
     float: left;
     width: 50%;
     height: 100%;
@@ -128,12 +126,11 @@ body {
     margin: auto;
 }
 
-.toppings {
-    text-align: center;
+.toppingSide {
     float: right;
-    width: 49.9%;
+    width: 49%;
     height: 100%;
-    background: #a1a1a1;
+    border: 1px solid black;
 }
 
 #logo {
@@ -162,30 +159,34 @@ pt2 {
     display: table-row;
 }
 
-#pizzaSizes {
-    width: 200ps;
-    height: 200px;
-    float: left;
-}
-
-input {
-    width: 20px;
-    position: relative;
-    left: 200px;
-    vertical-align: middle;
-}
-
-label {
-    width: 200px;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-}
-
 #toppingDIv {
     height: 410px;
     width: 400px;
     margin: auto;
-    background-image: url(images/baconFull.png);
+    background-image: url(images/pinneappleFull.png), url(images/baconFull.png);
     background-repeat: no-repeat;
+}
+
+.toppingSide > div {
+    float: left;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+#toppingSelect > div {
+    float: left;
+    width: 49%;
+    height: 344px;
+}
+
+#toppingSelect select {
+    border-radius: 10px;
+}
+
+#toppingSelect label {
+    width: 110px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
 }
