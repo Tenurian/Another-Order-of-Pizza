@@ -27,7 +27,7 @@ function capitalizeFirstLetter(string) {
         content += "<option value='left'>left</option>";
         content += "<option value='right'>right</option>";
         content += "<option value='full'>full</option>";
-        content += "</select>";
+        content += "</select><br>";
 
         if (i % 2 === 0) {
             //            console.log("topping goes on the left");

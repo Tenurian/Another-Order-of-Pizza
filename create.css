@@ -2,7 +2,6 @@
     margin: auto;
     width: 1500px;
     height: 725px;
-    ;
 }
 
 body {
@@ -40,12 +39,12 @@ body {
 }
 
 #specialtyPizzas {
-    background-color:black;
+    background-color: black;
     height: 50px;
     width: 1500px;
-    margin:auto;
-    
+    margin: auto;
 }
+
 #spicyItalian {
     background-color: aqua;
     height: 50px;
@@ -55,12 +54,10 @@ body {
     float: left;
     display: flex;
     align-items: center;
-  
 }
 
 #spicyItalianText {
     margin: auto;
-    
 }
 
 #worksPizza {
@@ -152,13 +149,24 @@ body {
     background-repeat: no-repeat;
 }
 
-#pt1,
-pt2 {
-    height: 600px;
-    width: 49%;
+.pt {
+    margin: 0 auto;
+    text-align: center;
+    height: 344px;
+    width: 25%;
     float: left;
     display: table-row;
 }
+
+/*
+#pt1 {
+    background-color: bisque;
+}
+
+#pt2 {
+    background-color: cadetblue;
+}
+*/
 
 #toppingDIv {
     height: 410px;
@@ -176,9 +184,9 @@ pt2 {
 }
 
 #toppingSelect > div {
-    float: left;
-    width: 49%;
-    height: 344px;
+/*    float: left;*/
+/*    width: 49%;*/
+/*    height: 344px;*/
 }
 
 #toppingSelect select {
@@ -191,6 +199,7 @@ pt2 {
     display: inline-block;
     vertical-align: middle;
 }
+
 
 span {
     float: right;
