@@ -1,7 +1,7 @@
 #Page {
     margin: auto;
     width: 1500px;
-    height: 900px;
+    height: 725px;
     ;
 }
 
@@ -37,6 +37,90 @@ body {
     display: flex;
     align-items: center;
     /*    border: 1px solid black;*/
+}
+
+#specialtyPizzas {
+    background-color:black;
+    height: 50px;
+    width: 1500px;
+    margin:auto;
+    
+}
+#spicyItalian {
+    background-color: aqua;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    margin-right: 5px;
+    float: left;
+    display: flex;
+    align-items: center;
+  
+}
+
+#spicyItalianText {
+    margin: auto;
+    
+}
+
+#worksPizza {
+    background-color: aqua;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    margin-right: 5px;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+#worksText {
+    margin: auto;
+}
+
+#veggiePizza {
+    background-color: aqua;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    margin-right: 5px;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+#veggieText {
+    margin: auto;
+}
+
+#meatLoverPizza {
+    background-color: aqua;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    margin-right: 5px;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+#meatLoverText {
+    margin: auto;
+}
+
+#bbqChickenPizza {
+    background-color: aqua;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    margin-right: 5px;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+#bbqChickenText {
+    margin: auto;
 }
 
 #myImg {
