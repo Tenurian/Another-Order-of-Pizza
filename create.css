@@ -66,39 +66,37 @@ body {
     float: left;
     display: flex;
     align-items: center;
-    
     cursor: pointer;
 }
 
 @keyframes darken {
-    from{
+    from {
         color: black;
         background: aqua;
     }
-    
     to {
         color: white;
         background: rgb(0, 128, 128);
     }
 }
 
-.specialty:hover{
+.specialty:hover {
     animation-name: darken;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
 @keyframes lighten {
-    from{
+    from {
         color: white;
         background: rgb(0, 128, 128);
     }
-    
     to {
         color: black;
         background: aqua;
     }
 }
+
 .specialty:not(hover) {
     animation-name: lighten;
     animation-duration: 0.5s;
