@@ -33,7 +33,7 @@ body {
     float: left;
     width: 50%;
     height: 100%;
-    background-image: url(images/pizzaJustCrust.jpg);
+    background-image: url(images/pizzaDisplay.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -67,39 +67,37 @@ body {
     display: flex;
     align-items: center;
     font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
-    
     cursor: pointer;
 }
 
 @keyframes darken {
-    from{
+    from {
         color: black;
         background: rgb(246, 139, 31);
     }
-    
     to {
         color: white;
         background: rgb(57, 128, 60);
     }
 }
 
-.specialty:hover{
+.specialty:hover {
     animation-name: darken;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
 @keyframes lighten {
-    from{
+    from {
         color: white;
         background: rgb(246, 139, 31);
     }
-    
     to {
         color: black;
         background: rgb(246, 139, 31);
     }
 }
+
 .specialty:not(hover) {
     animation-name: lighten;
     animation-duration: 0.5s;
@@ -195,10 +193,57 @@ span {
 
 #sauces {
     text-align: center;
+    width: 100%;
 }
 
 #myCanvas {
     width: 100%;
     height: 100%;
     border: 1px solid red;
+}
+
+#pizzaSauce {
+    margin: auto;
+    width: 200px;
+}
+
+
+/*radio button*/
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + span {
+    background-color: #fefefe;
+    border: 1px solid;
+    border-color: #ccc #fff #fff #ccc;
+    border-radius: 50px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    float: left;
+    margin-right: 7px;
+    padding: 7px;
+    position: relative;
+    -webkit-appearance: none;
+}
+
+input[type="radio"]:checked + span {
+    color: #f00;
+}
+
+input[type="radio"]:checked + span:after {
+    background: #f00;
+    border-radius: 50px;
+    box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.75), inset -1px -1px 1px rgba(0, 0, 0, 0.75);
+    content: " ";
+    height: 10px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    width: 10px;
+}
+
+label:hover input[type="radio"] + span {
+    border-color: #900 #f00 #f00 #900;
 }
