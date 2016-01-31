@@ -24,7 +24,7 @@ body {
 
 #list {
     color: white;
-    background: #323232;
+    background: rgb(57, 128, 60);
     float: right;
     width: 24%;
 }
@@ -66,6 +66,7 @@ body {
     float: left;
     display: flex;
     align-items: center;
+    font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
     
     cursor: pointer;
 }
