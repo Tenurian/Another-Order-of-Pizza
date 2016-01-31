@@ -14,6 +14,7 @@ function capitalizeFirstLetter(string) {
 }
 
 (function (data) {
+//    $("#innerList").addClass("hidden");
     console.log("JSON: ");
     console.log(data);
     var i, content = "",
@@ -40,13 +41,20 @@ function capitalizeFirstLetter(string) {
 }(my_JSON_object));
 
 $(".topping").change(function () {
-    var list = document.getElementById("list"),
-        content = "<ul>",
+    var list = document.getElementById("innerList"),
+        listTotal = document.getElementById("listTotal"),
+        content = "<h3>Toppings:</h3><br><ul>",
+        count = 0,
+        total = 0,
         i, cost;
     console.log("topping was changed");
     $.each($(".topping"), function (index, value) {
         console.log(value.value);
         if (value.value !== "none") {
+<<<<<<< HEAD
+=======
+            count++;
+>>>>>>> 0bb03b8264aec3ee793174356d03919c06bcb69c
             console.log(value.name);
             for (i = 0; i < my_JSON_object.toppings.length; i++) {
                 if (capitalizeFirstLetter(my_JSON_object.toppings[i].name) === value.name) {
@@ -55,9 +63,11 @@ $(".topping").change(function () {
                 }
             }
             content += "<li>" + value.name + "<span>$" + cost + "</span></li>";
+            total += parseFloat(cost);
         }
     });
 
+<<<<<<< HEAD
     content += "</ul>";
 
     list.innerHTML = content;
@@ -77,4 +87,21 @@ $("#meatLoverPizza").click(function () {
 });
 $("#bbqChickenPizza").click(function () {
     document.getElementById('toppingDIv').style.backgroundImage = "url(images/bbqChicken.png)";
+=======
+    /* FIRST TOPPING IS FREE */
+    total -= 1;
+
+    if (count >= 5) {
+        total -= 1;
+        $("#specialDeal").removeClass("hidden");
+    } else {
+        $("#specialDeal").addClass("hidden");
+    }
+
+    content += "</ul>";
+
+    list.innerHTML = content;
+
+    listTotal.innerHTML = "<p>Total: $" + total + "</p>"
+>>>>>>> 0bb03b8264aec3ee793174356d03919c06bcb69c
 });

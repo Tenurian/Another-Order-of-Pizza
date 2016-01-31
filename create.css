@@ -1,4 +1,4 @@
-#Page {
+    #Page {
     margin: auto;
     width: 1500px;
     height: 755px;
@@ -29,6 +29,7 @@ body {
 }
 
 #list {
+    position: relative;
     color: white;
     background: rgb(57, 128, 60);
     float: right;
@@ -105,7 +106,8 @@ body {
 @keyframes lighten {
     from {
         color: white;
-        background: rgb(246, 139, 31);
+        /*        background: rgb(246, 139, 31);*/
+        background: rgb(57, 128, 60);
     }
     to {
         color: black;
@@ -162,7 +164,6 @@ body {
     height: 470px;
     width: 470px;
     margin: auto;
-    background-repeat: no-repeat;
 }
 
 .toppings {
@@ -198,7 +199,7 @@ span {
     border: 1px solid red;
 }
 
-#pizzaSauce {
+<<<<<<< HEAD #pizzaSauce {
     display: inline;
     width: 100%;
 }
@@ -279,4 +280,40 @@ label:hover input[type="radio"] + span {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-}
+    =======#specialDeal {
+        margin-top: 5px;
+        text-align: center;
+    }
+    #specialDeal h4 {
+        color: black;
+        display: inline-block;
+        padding: 5px;
+        background-color: rgb(246, 139, 31);
+        border: 3px solid rgb(242, 103, 34);
+        border-radius: 15px;
+        margin: 3px auto;
+    }
+    .hidden {
+        visibility: hidden;
+    }
+    #innerList {
+        color: black;
+        width: 75%;
+        margin: 10px auto;
+        background-color: rgb(246, 139, 31);
+        border: 3px solid rgb(242, 103, 34);
+        border-radius: 20px;
+    }
+    #innerList h3 {
+        text-align: center;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    #listTotal {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        >>>>>>> 0bb03b8264aec3ee793174356d03919c06bcb69c
+    }
