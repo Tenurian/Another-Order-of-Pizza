@@ -158,8 +158,10 @@ body {
     height: 410px;
     width: 400px;
     margin: auto;
+/*
     background-image: url(images/pinneappleFull.png), url(images/baconFull.png);
     background-repeat: no-repeat;
+*/
 }
 
 .toppingSide > div {
