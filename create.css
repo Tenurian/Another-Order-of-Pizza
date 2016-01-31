@@ -227,7 +227,7 @@ span {
 #innerList{
     color: black;
     width: 75%;
-    margin: 0 auto;
+    margin: 10px auto;
     background-color: rgb(246, 139, 31);
     border: 3px solid rgb(242, 103, 34);
     border-radius: 20px;
