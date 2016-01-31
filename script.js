@@ -40,13 +40,17 @@ function capitalizeFirstLetter(string) {
 }(my_JSON_object));
 
 $(".topping").change(function () {
-    var list = document.getElementById("list"),
+    var list = document.getElementById("innerList"),
+        listTotal = document.getElementById("listTotal"),
         content = "<ul>",
+        count = 0,
+        total = 0,
         i, cost;
     console.log("topping was changed");
     $.each($(".topping"), function(index, value){
         console.log(value.value);
         if(value.value !== "none"){
+            count++;
             console.log(value.name);
             for(i = 0; i < my_JSON_object.toppings.length; i++){
                 if(capitalizeFirstLetter(my_JSON_object.toppings[i].name) === value.name){
@@ -55,10 +59,20 @@ $(".topping").change(function () {
                 }
             }
             content += "<li>" + value.name + "<span>$" + cost + "</span></li>";
+            total += parseFloat(cost);
         }
     });
+    
+    if(count >= 5){
+        total -= 2;
+        $("#specialDeal").removeClass("hidden");
+    } else {
+        $("#specialDeal").addClass("hidden");
+    }
     
     content += "</ul>";
     
     list.innerHTML = content;
+    
+    listTotal.innerHTML = "<p>Total: $" + total + "</p>"
 });
