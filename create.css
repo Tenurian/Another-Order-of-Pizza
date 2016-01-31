@@ -122,9 +122,9 @@ body {
 }
 
 #logo {
-    background-image: url(images/logo.png);
-    height: 84px;
-    width: 515px;
+    background-image: url(images/updatedLogo.png);
+    height: 91px;
+    width: 460px;
     background-repeat: no-repeat;
     margin: auto;
     /* for the dropshadow on the logo */
