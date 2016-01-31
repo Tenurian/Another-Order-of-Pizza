@@ -1,11 +1,13 @@
 #Page {
     margin: auto;
     width: 1500px;
-    height: 725px;
+    height: 755px;
 }
 
 body {
-    background-color: white;
+    background-image: url(images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 50%;
@@ -13,13 +15,17 @@ body {
 }
 
 .focus {
-    margin-top: 30px;
+    margin-top: 20px;
     height: 562.5px;
 }
 
 #creation {
     width: 75%;
     float: left;
+    background: white;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #list {
@@ -27,9 +33,13 @@ body {
     background: rgb(57, 128, 60);
     float: right;
     width: 24%;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #pizza {
+    margin-left: 25px;
     float: left;
     width: 50%;
     height: 100%;
@@ -43,6 +53,10 @@ body {
 }
 
 #specialtyPizzas {
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
     background-color: rgb(242, 103, 34);
     height: 50px;
     width: 100%;
@@ -58,6 +72,7 @@ body {
 }
 
 .specialty {
+    border-radius: 20px;
     background-color: rgb(246, 139, 31);
     height: 50px;
     width: 150px;
@@ -109,17 +124,6 @@ body {
     margin: auto;
 }
 
-#myImg {
-    margin: auto;
-}
-
-.toppingSide {
-    float: right;
-    width: 49%;
-    height: 100%;
-    border: 1px solid black;
-}
-
 #logo {
     background-image: url(images/updatedLogo.png);
     height: 91px;
@@ -134,6 +138,8 @@ body {
 }
 
 #Header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     display: flex;
     align-items: center;
     background-image: url(images/wood.jpg);
@@ -147,39 +153,29 @@ body {
     margin: 0 auto;
     text-align: center;
     height: 344px;
-    width: 25%;
+    width: 50%;
     float: left;
     display: table-row;
 }
 
 #toppingDIv {
-    height: 410px;
-    width: 400px;
+    height: 470px;
+    width: 470px;
     margin: auto;
-    background-image: url(images/pinneappleFull.png), url(images/baconFull.png);
     background-repeat: no-repeat;
 }
 
-.toppingSide > div {
-    float: left;
-    text-align: center;
-    width: 100%;
-    height: auto;
+.toppings {
+    border-left: 2px solid orange;
+    height: 560px;
+    width: 45%;
+    float: right;
+    color: rgb(57, 128, 60);
+    ;
 }
 
 #toppingSelect * {
     text-align: center;
-}
-
-#toppingSelect select {
-    border-radius: 10px;
-}
-
-#toppingSelect label {
-    width: 110px;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 span {
@@ -203,8 +199,27 @@ span {
 }
 
 #pizzaSauce {
+    display: inline;
+    width: 100%;
+}
+
+span {
+    text-align: center;
+    color: rgb(242, 103, 34);
+}
+
+fieldset {
+    border: 0px;
+    width: 300px;
     margin: auto;
-    width: 200px;
+}
+
+#topp {
+    width: 210px;
+}
+
+label {
+    color: black;
 }
 
 
@@ -220,30 +235,48 @@ input[type="radio"] + span {
     border-color: #ccc #fff #fff #ccc;
     border-radius: 50px;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
-    display: inline-block;
-    float: left;
-    margin-right: 7px;
+    margin-right: 30px;
     padding: 7px;
-    position: relative;
     -webkit-appearance: none;
 }
 
 input[type="radio"]:checked + span {
-    color: #f00;
-}
-
-input[type="radio"]:checked + span:after {
-    background: #f00;
-    border-radius: 50px;
-    box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.75), inset -1px -1px 1px rgba(0, 0, 0, 0.75);
-    content: " ";
-    height: 10px;
-    left: 2px;
-    position: absolute;
-    top: 2px;
-    width: 10px;
+    color: white;
+    background-color: rgb(57, 128, 60);
 }
 
 label:hover input[type="radio"] + span {
-    border-color: #900 #f00 #f00 #900;
+    border-color: rgb(242, 103, 34);
+}
+
+
+/*bottom border*/
+
+.borderBot {
+    border-bottom: 2px solid orange;
+    width: 280px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-style: dotted;
+}
+
+
+/*optionsbox*/
+
+#toppingSelect select {
+    background-color: #fefefe;
+    border: 1px solid;
+    border-color: #ccc #fff #fff #ccc;
+    border-radius: 50px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+    margin-right: 30px;
+    padding: 7px;
+    -webkit-appearance: none;
+}
+
+#toppingSelect label {
+    width: 110px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
 }

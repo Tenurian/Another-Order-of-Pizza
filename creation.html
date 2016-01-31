@@ -26,34 +26,37 @@
             <div class="toppings">
                 <div id="pizzaSizes">
                     <h3>Pizza Sizes</h3>
-                    <label class="checkbox">
-                        <input type="checkbox" value="Small">Small</label>
-                    <label class="checkbox">
-                        <input type="checkbox" value="Medium">Medium</label>
-                    <label class="checkbox">
-                        <input type="checkbox" value="Large">Large</label>
-
+                    <div class="borderBot"></div>
+                    <fieldset id="sizes">
+                        <label>
+                            <input type="radio" name="radio" value="1"> <span>Small</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio" value="2"> <span>Medium</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio" value="2" checked> <span>Large</span>
+                        </label>
+                    </fieldset>
                 </div>
                 <div id="sauces">
                     <h3>Sauces</h3>
+                    <div class="borderBot"></div>
                     <div id="pizzaSauce">
-                        <ul>
-                            <li>
-                                <label>
-                                    <input type="radio" name="radio" value="1" checked> <span></span> Regular
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="radio" name="radio" value="2"> <span></span> BBQ
-                                </label>
-                            </li>
-                        </ul>
+                        <fieldset id="topp">
+                            <label>
+                                <input type="radio" name="radio2" value="1" checked> <span>Regular</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="radio2" value="2"> <span>BBQ</span>
+                            </label>
+                        </fieldset>
                     </div>
                 </div>
 
                 <div id="toppingSelect">
                     <h3>Toppings</h3>
+                    <div class="borderBot"></div>
                     <div id="pt1" class="pt"></div>
                     <div id="pt2" class="pt"></div>
                 </div>

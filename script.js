@@ -44,12 +44,12 @@ $(".topping").change(function () {
         content = "<ul>",
         i, cost;
     console.log("topping was changed");
-    $.each($(".topping"), function(index, value){
+    $.each($(".topping"), function (index, value) {
         console.log(value.value);
-        if(value.value !== "none"){
+        if (value.value !== "none") {
             console.log(value.name);
-            for(i = 0; i < my_JSON_object.toppings.length; i++){
-                if(capitalizeFirstLetter(my_JSON_object.toppings[i].name) === value.name){
+            for (i = 0; i < my_JSON_object.toppings.length; i++) {
+                if (capitalizeFirstLetter(my_JSON_object.toppings[i].name) === value.name) {
                     cost = my_JSON_object.toppings[i].price;
                     i = my_JSON_object.toppings.length + 1;
                 }
@@ -57,8 +57,24 @@ $(".topping").change(function () {
             content += "<li>" + value.name + "<span>$" + cost + "</span></li>";
         }
     });
-    
+
     content += "</ul>";
-    
+
     list.innerHTML = content;
+});
+
+$("#spicyItalian").click(function () {
+    document.getElementById('toppingDIv').style.backgroundImage = "url(images/spicyItalian.png)";
+});
+$("#worksPizza").click(function () {
+    document.getElementById('toppingDIv').style.backgroundImage = "url(images/works.png)";
+});
+$("#veggiePizza").click(function () {
+    document.getElementById('toppingDIv').style.backgroundImage = "url(images/veggie.png)";
+});
+$("#meatLoverPizza").click(function () {
+    document.getElementById('toppingDIv').style.backgroundImage = "url(images/meatLover.png)";
+});
+$("#bbqChickenPizza").click(function () {
+    document.getElementById('toppingDIv').style.backgroundImage = "url(images/bbqChicken.png)";
 });
