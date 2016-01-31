@@ -14,7 +14,7 @@ function capitalizeFirstLetter(string) {
 }
 
 (function (data) {
-//    $("#innerList").addClass("hidden");
+    //    $("#innerList").addClass("hidden");
     console.log("JSON: ");
     console.log(data);
     var i, content = "",
@@ -51,10 +51,7 @@ $(".topping").change(function () {
     $.each($(".topping"), function (index, value) {
         console.log(value.value);
         if (value.value !== "none") {
-<<<<<<< HEAD
-=======
             count++;
->>>>>>> 0bb03b8264aec3ee793174356d03919c06bcb69c
             console.log(value.name);
             for (i = 0; i < my_JSON_object.toppings.length; i++) {
                 if (capitalizeFirstLetter(my_JSON_object.toppings[i].name) === value.name) {
@@ -67,7 +64,6 @@ $(".topping").change(function () {
         }
     });
 
-<<<<<<< HEAD
     content += "</ul>";
 
     list.innerHTML = content;
@@ -87,7 +83,7 @@ $("#meatLoverPizza").click(function () {
 });
 $("#bbqChickenPizza").click(function () {
     document.getElementById('toppingDIv').style.backgroundImage = "url(images/bbqChicken.png)";
-=======
+
     /* FIRST TOPPING IS FREE */
     total -= 1;
 
@@ -103,5 +99,4 @@ $("#bbqChickenPizza").click(function () {
     list.innerHTML = content;
 
     listTotal.innerHTML = "<p>Total: $" + total + "</p>"
->>>>>>> 0bb03b8264aec3ee793174356d03919c06bcb69c
 });
