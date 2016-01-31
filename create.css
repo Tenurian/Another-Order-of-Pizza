@@ -43,7 +43,7 @@ body {
 }
 
 #specialtyPizzas {
-    background-color: black;
+    background-color: rgb(242, 103, 34);
     height: 50px;
     width: 100%;
     margin: 0 auto;
@@ -58,7 +58,7 @@ body {
 }
 
 .specialty {
-    background-color: aqua;
+    background-color: rgb(246, 139, 31);
     height: 50px;
     width: 150px;
     text-align: center;
@@ -73,12 +73,12 @@ body {
 @keyframes darken {
     from{
         color: black;
-        background: aqua;
+        background: rgb(246, 139, 31);
     }
     
     to {
         color: white;
-        background: rgb(0, 128, 128);
+        background: rgb(57, 128, 60);
     }
 }
 
@@ -91,12 +91,12 @@ body {
 @keyframes lighten {
     from{
         color: white;
-        background: rgb(0, 128, 128);
+        background: rgb(246, 139, 31);
     }
     
     to {
         color: black;
-        background: aqua;
+        background: rgb(246, 139, 31);
     }
 }
 .specialty:not(hover) {
