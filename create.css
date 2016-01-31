@@ -233,6 +233,12 @@ span {
     border-radius: 20px;
 }
 
+#innerList h3 {
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
 #listTotal {
     width: 100%;
     text-align: center;

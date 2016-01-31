@@ -14,6 +14,7 @@ function capitalizeFirstLetter(string) {
 }
 
 (function (data) {
+//    $("#innerList").addClass("hidden");
     console.log("JSON: ");
     console.log(data);
     var i, content = "",
@@ -42,18 +43,18 @@ function capitalizeFirstLetter(string) {
 $(".topping").change(function () {
     var list = document.getElementById("innerList"),
         listTotal = document.getElementById("listTotal"),
-        content = "<ul>",
+        content = "<h3>Toppings:</h3><br><ul>",
         count = 0,
         total = 0,
         i, cost;
     console.log("topping was changed");
-    $.each($(".topping"), function(index, value){
+    $.each($(".topping"), function (index, value) {
         console.log(value.value);
-        if(value.value !== "none"){
+        if (value.value !== "none") {
             count++;
             console.log(value.name);
-            for(i = 0; i < my_JSON_object.toppings.length; i++){
-                if(capitalizeFirstLetter(my_JSON_object.toppings[i].name) === value.name){
+            for (i = 0; i < my_JSON_object.toppings.length; i++) {
+                if (capitalizeFirstLetter(my_JSON_object.toppings[i].name) === value.name) {
                     cost = my_JSON_object.toppings[i].price;
                     i = my_JSON_object.toppings.length + 1;
                 }
@@ -62,17 +63,20 @@ $(".topping").change(function () {
             total += parseFloat(cost);
         }
     });
-    
-    if(count >= 5){
-        total -= 2;
+
+    /* FIRST TOPPING IS FREE */
+    total -= 1;
+
+    if (count >= 5) {
+        total -= 1;
         $("#specialDeal").removeClass("hidden");
     } else {
         $("#specialDeal").addClass("hidden");
     }
-    
+
     content += "</ul>";
-    
+
     list.innerHTML = content;
-    
+
     listTotal.innerHTML = "<p>Total: $" + total + "</p>"
 });
