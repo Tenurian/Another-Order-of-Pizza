@@ -23,6 +23,7 @@ body {
 }
 
 #list {
+    position: relative;
     color: white;
     background: rgb(57, 128, 60);
     float: right;
@@ -201,4 +202,21 @@ span {
     width: 100%;
     height: 100%;
     border: 1px solid red;
+}
+
+#specialDeal {
+    text-align: center;
+}
+
+#specialDeal h4 {
+    margin: 3px auto;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#listTotal{
+    position: absolute;
+    bottom: 0;
 }
