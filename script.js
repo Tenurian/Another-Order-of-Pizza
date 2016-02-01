@@ -69,20 +69,19 @@ $(".topping").change(function () {
     list.innerHTML = content;
 });
 
-
 /* FIRST TOPPING IS FREE */
-total -= 1;
-
-if (count >= 5) {
-    total -= 1;
-    $("#specialDeal").removeClass("hidden");
-} else {
-    $("#specialDeal").addClass("hidden");
-}
-
-content += "</ul>";
-
-list.innerHTML = content;
-
-listTotal.innerHTML = "<p>Total: $" + total + "</p>"
-});
+//total -= 1;
+//
+//if (count >= 5) {
+//    total -= 1;
+//    $("#specialDeal").removeClass("hidden");
+//} else {
+//    $("#specialDeal").addClass("hidden");
+//}
+//
+//content += "</ul>";
+//
+//list.innerHTML = content;
+//
+//listTotal.innerHTML = "<p>Total: $" + total + "</p>"
+//});
