@@ -193,12 +193,6 @@
         width: 100%;
     }
     
-    #myCanvas {
-        width: 100%;
-        height: 100%;
-        border: 0px solid red;
-    }
-    
     #pizzaSauce {
         display: inline;
         width: 100%;
@@ -213,10 +207,6 @@
         border: 0px;
         width: 300px;
         margin: auto;
-    }
-    
-    #topp {
-        width: 210px;
     }
     
     label {
@@ -277,6 +267,25 @@
     }
     /*list*/
     
+    #submit {
+        height: 30px;
+        width: 90px;
+        padding: 5px;
+        background-color: rgb(242, 103, 34);
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        position: absolute;
+        top: 520px;
+        left: 135px;
+        cursor: pointer;
+    }
+    
+    #submit h4 {
+        margin: auto;
+        cursor: pointer;
+    }
+    
     #specialDeal {
         margin-top: 5px;
         text-align: center;
@@ -317,4 +326,16 @@
         margin: 0 auto;
         position: absolute;
         bottom: 0;
+    }
+    /*topping applying*/
+    
+    #kindaCanvas {
+        margin-left: 80px;
+        width: 400px;
+        height: 440px;
+    }
+    
+    .images {
+        position: absolute;
+        z-index: 10;
     }

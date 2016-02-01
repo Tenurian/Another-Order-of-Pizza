@@ -56,6 +56,8 @@ $(".topping").change(function () {
             for (i = 0; i < my_JSON_object.toppings.length; i++) {
                 if (capitalizeFirstLetter(my_JSON_object.toppings[i].name) === value.name) {
                     cost = my_JSON_object.toppings[i].price;
+
+                    img_create(my_JSON_object.toppings[i].image, 'keep', i);
                     i = my_JSON_object.toppings.length + 1;
                 }
             }
@@ -69,7 +71,24 @@ $(".topping").change(function () {
     list.innerHTML = content;
 });
 
-document.getElementById("productclass").value = "7";
+
+
+function img_create(src, answer, id) {
+    if (answer === 'keep') {
+        var elem = document.createElement("img");
+        elem.src = src;
+        elem.setAttribute("height", "410");
+        elem.setAttribute("width", "375");
+        elem.setAttribute('class', 'images');
+        elem.setAttribute('id', id)
+        document.getElementById("kindaCanvas").appendChild(elem);
+    }
+
+}
+
+function next() {
+    location.href = "www.yoursite.com";
+}
 
 /* FIRST TOPPING IS FREE */
 //total -= 1;
