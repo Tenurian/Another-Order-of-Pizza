@@ -279,14 +279,32 @@ label:hover input[type="radio"] + span {
     display: flex;
     align-items: center;
     border-radius: 10px;
+    float: right;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    /*
     position: absolute;
-    top: 520px;
+    bottom: 5px;
     left: 135px;
+*/
+    
     cursor: pointer;
 }
 #submit h4 {
     margin: auto;
     cursor: pointer;
+}
+#listTotal {
+    width: 50%;
+    text-align: center;
+    height: 40px;
+    float: left;
+}
+#listBottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: inline-block;
 }
 #specialDeal {
     margin-top: 5px;
@@ -317,13 +335,6 @@ label:hover input[type="radio"] + span {
     text-align: center;
     margin-bottom: 0px;
     padding-bottom: 0px;
-}
-#listTotal {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    position: absolute;
-    height: 40px;
 }
 
 /*topping applying*/
