@@ -69,34 +69,20 @@ $(".topping").change(function () {
     list.innerHTML = content;
 });
 
-$("#spicyItalian").click(function () {
-    document.getElementById('toppingDIv').style.backgroundImage = "url(images/spicyItalian.png)";
-});
-$("#worksPizza").click(function () {
-    document.getElementById('toppingDIv').style.backgroundImage = "url(images/works.png)";
-});
-$("#veggiePizza").click(function () {
-    document.getElementById('toppingDIv').style.backgroundImage = "url(images/veggie.png)";
-});
-$("#meatLoverPizza").click(function () {
-    document.getElementById('toppingDIv').style.backgroundImage = "url(images/meatLover.png)";
-});
-$("#bbqChickenPizza").click(function () {
-    document.getElementById('toppingDIv').style.backgroundImage = "url(images/bbqChicken.png)";
 
-    /* FIRST TOPPING IS FREE */
+/* FIRST TOPPING IS FREE */
+total -= 1;
+
+if (count >= 5) {
     total -= 1;
+    $("#specialDeal").removeClass("hidden");
+} else {
+    $("#specialDeal").addClass("hidden");
+}
 
-    if (count >= 5) {
-        total -= 1;
-        $("#specialDeal").removeClass("hidden");
-    } else {
-        $("#specialDeal").addClass("hidden");
-    }
+content += "</ul>";
 
-    content += "</ul>";
+list.innerHTML = content;
 
-    list.innerHTML = content;
-
-    listTotal.innerHTML = "<p>Total: $" + total + "</p>"
+listTotal.innerHTML = "<p>Total: $" + total + "</p>"
 });
