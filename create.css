@@ -305,15 +305,18 @@ label:hover input[type="radio"] + span {
     
     cursor: pointer;
 }
+
+
 #submit h4 {
     margin: auto;
     cursor: pointer;
 }
 #listTotal {
+/*    padding-top:10px;*/
+    position: absolute;
+    bottom: 10px;
     width: 50%;
     text-align: center;
-    height: 40px;
-    float: left;
 }
 #listBottom {
     position: absolute;
