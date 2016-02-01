@@ -4,6 +4,11 @@
 var console = window.console,
     request = new XMLHttpRequest();
 
+$(document).ready(function () {
+    $("#popup").hide();
+    $("#popup").attr('s-index', '50');
+})
+
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
@@ -218,5 +223,9 @@ $(".specialty").on('click', function () {
 
 
 function next() {
-    location.href = "http://www.whistlerwag.com/wp-content/uploads/2015/03/thank-you-clothesline-752x483.jpg";
+    //    location.href = "http://www.whistlerwag.com/wp-content/uploads/2015/03/thank-you-clothesline-752x483.jpg";
+    $('#popup').css({
+        "z-index": "50"
+    });
+    $("#popup").fadeIn(500);
 }
