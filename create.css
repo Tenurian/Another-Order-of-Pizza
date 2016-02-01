@@ -345,7 +345,7 @@ label:hover input[type="radio"] + span {
     position: absolute;
     height: 40px;
 }
-    
+
 
 /*topping applying*/
 
@@ -366,7 +366,7 @@ label:hover input[type="radio"] + span {
 }
 
 #myCanvas {
-    border: 1px solid red;
+    border: 0px solid red;
     width: 100%;
     height: 100%;
 }

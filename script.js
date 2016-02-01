@@ -179,9 +179,8 @@ $(".topping").change(function () {
 //}
 
 function next() {
-    location.href = "www.yoursite.com";
+    location.href = "http://www.whistlerwag.com/wp-content/uploads/2015/03/thank-you-clothesline-752x483.jpg";
 }
-
 /* FIRST TOPPING IS FREE */
 //total -= 1;
 //
