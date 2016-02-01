@@ -104,7 +104,7 @@ function addTheToppings() {
     for (i = 0; i < data.toppings.length; i++) {
         topName = capitalizeFirstLetter(data.toppings[i].name);
         content = "<label for '" + topName + "'>" + topName + ":</label>";
-        content += "<select name='" + topName + "' id='" + topName + "' class='topping'>";
+        content += "<select name='" + topName + "' id='" + topName.replace(/ /g, '') + "' class='topping'>";
         content += "<option value='none'>none</option>";
         content += "<option value='" + data.toppings[i].name + "1'>left</option>";
         content += "<option value='" + data.toppings[i].name + "2'>right</option>";
@@ -128,7 +128,7 @@ function addTheToppings() {
     $("#images").hide();
 }(my_JSON_object));
 
-$(".sauceButton").on('click', function () {
+$(".sauceButton").change(function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     addTheSauce();
     addTheToppings();
@@ -141,37 +141,81 @@ $(".topping").change(function () {
     //console.log("topping was changed");
 });
 
+$(".specialty").on('click', function () {
+    console.log(this.id);
+    switch (this.id) {
+    case "bbqChickenPizza":
+        $("input[name=radio2][value=" + 1 + "]").prop('checked', true);
+        $("#Cheese")        .prop('selectedIndex',3);
+        $("#Pepperoni")     .prop('selectedIndex',0);
+        $("#Sausage")       .prop('selectedIndex',0);
+        $("#Pineapple")     .prop('selectedIndex',0);
+        $("#Bacon")         .prop('selectedIndex',0);
+        $("#Blackolives")   .prop('selectedIndex',0);
+        $("#Mushrooms")     .prop('selectedIndex',0);
+        $("#Greenpeppers")  .prop('selectedIndex',0);
+        $("#Onions")        .prop('selectedIndex',0);
+        $("#Chicken")       .prop('selectedIndex',0);
+        break;
+    case "spicyItalian":
+        $("input[name=radio2][value=" + 2 + "]").prop('checked', true);
+        $("#Cheese")        .prop('selectedIndex',0);
+        $("#Pepperoni")     .prop('selectedIndex',0);
+        $("#Sausage")       .prop('selectedIndex',0);
+        $("#Pineapple")     .prop('selectedIndex',0);
+        $("#Bacon")         .prop('selectedIndex',0);
+        $("#Blackolives")   .prop('selectedIndex',0);
+        $("#Mushrooms")     .prop('selectedIndex',0);
+        $("#Greenpeppers")  .prop('selectedIndex',0);
+        $("#Onions")        .prop('selectedIndex',0);
+        $("#Chicken")       .prop('selectedIndex',0);
+        break;
+    case "worksPizza":
+        $("input[name=radio2][value=" + 2 + "]").prop('checked', true);
+        $("#Cheese")        .prop('selectedIndex',0);
+        $("#Pepperoni")     .prop('selectedIndex',0);
+        $("#Sausage")       .prop('selectedIndex',0);
+        $("#Pineapple")     .prop('selectedIndex',0);
+        $("#Bacon")         .prop('selectedIndex',0);
+        $("#Blackolives")   .prop('selectedIndex',0);
+        $("#Mushrooms")     .prop('selectedIndex',0);
+        $("#Greenpeppers")  .prop('selectedIndex',0);
+        $("#Onions")        .prop('selectedIndex',0);
+        $("#Chicken")       .prop('selectedIndex',0);
+        break;
+    case "veggiePizza":
+        $("input[name=radio2][value=" + 2 + "]").prop('checked', true);
+        $("#Cheese")        .prop('selectedIndex',0);
+        $("#Pepperoni")     .prop('selectedIndex',0);
+        $("#Sausage")       .prop('selectedIndex',0);
+        $("#Pineapple")     .prop('selectedIndex',0);
+        $("#Bacon")         .prop('selectedIndex',0);
+        $("#Blackolives")   .prop('selectedIndex',0);
+        $("#Mushrooms")     .prop('selectedIndex',0);
+        $("#Greenpeppers")  .prop('selectedIndex',0);
+        $("#Onions")        .prop('selectedIndex',0);
+        $("#Chicken")       .prop('selectedIndex',0);
+        break;
+    case "meatLoverPizza":
+        $("input[name=radio2][value=" + 2 + "]").prop('checked', true);
+        $("#Cheese")        .prop('selectedIndex',0);
+        $("#Pepperoni")     .prop('selectedIndex',0);
+        $("#Sausage")       .prop('selectedIndex',0);
+        $("#Pineapple")     .prop('selectedIndex',0);
+        $("#Bacon")         .prop('selectedIndex',0);
+        $("#Blackolives")   .prop('selectedIndex',0);
+        $("#Mushrooms")     .prop('selectedIndex',0);
+        $("#Greenpeppers")  .prop('selectedIndex',0);
+        $("#Onions")        .prop('selectedIndex',0);
+        $("#Chicken")       .prop('selectedIndex',0);
+        break;
+    }
 
-//
-//function img_create(src, answer, id) {
-//    if (answer === 'keep') {
-//        var elem = document.createElement("img");
-//        elem.src = src;
-//        elem.setAttribute("height", "410");
-//        elem.setAttribute("width", "375");
-//        elem.setAttribute('class', 'images');
-//        elem.setAttribute('id', id)
-//        document.getElementById("kindaCanvas").appendChild(elem);
-//    }
-//
-//}
+    addTheSauce();
+    addTheToppings();
+});
+
 
 function next() {
     location.href = "http://www.whistlerwag.com/wp-content/uploads/2015/03/thank-you-clothesline-752x483.jpg";
 }
-/* FIRST TOPPING IS FREE */
-//total -= 1;
-//
-//if (count >= 5) {
-//    total -= 1;
-//    $("#specialDeal").removeClass("hidden");
-//} else {
-//    $("#specialDeal").addClass("hidden");
-//}
-//
-//content += "</ul>";
-//
-//list.innerHTML = content;
-//
-//listTotal.innerHTML = "<p>Total: $" + total + "</p>"
-//});
