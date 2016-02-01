@@ -60,28 +60,6 @@ function addTheToppings() {
                         ctx.save();
                         ctx.translate(canvas.width, canvas.height); // change origin
                         ctx.rotate(Math.PI);
-                        //                            ctx.drawImage(link, x, y, 20, 20); // draws a chain link or dagger
-                        //                            ctx.restore();
-                        //                        context.clearRect(0, 0, canvas.width, canvas.height);
-                        //
-                        //                        // save the unrotated context of the canvas so we can restore it later
-                        //                        // the alternative is to untranslate & unrotate after drawing
-                        //                        context.save();
-                        //
-                        //                        // move to the center of the canvas
-                        //                        context.translate(canvas.width / 2, canvas.height / 2);
-                        //
-                        //                        // rotate the canvas to the specified degrees
-                        //                        context.rotate(degrees * Math.PI / 180);
-                        //
-                        //                        // draw the image
-                        //                        // since the context is rotated, the image will be rotated also
-                        //                        context.drawImage(image, -image.width / 2, -image.width / 2);
-                        //
-                        //                        // we’re done with the rotating so restore the unrotated context
-                        //                        context.restore();
-
-
                         ctx.drawImage(document.getElementById(value.name + "HalfImage"), 10, 10, canvas.width - 20, canvas.height - 20);
                         ctx.restore()
                     }
@@ -89,29 +67,29 @@ function addTheToppings() {
                     i = my_JSON_object.toppings.length + 1;
                 }
             }
-            content += "<li>" + value.name + "<span id='span1'>$" + cost + "</span></li>";
-
-
-            /* FIRST TOPPING IS FREE */
-            total -= 1;
-
-            if (count >= 5) {
-                total -= 1;
-                $("#specialDeal").removeClass("hidden");
-            } else {
-                $("#specialDeal").addClass("hidden");
-            }
-
-            content += "</ul>";
-
-            list.innerHTML = content;
-
-            listTotal.innerHTML = "<p>Total: $" + total + "</p>"
-            total += parseFloat(cost);
+            content += "<li>" + value.name + "<span id='span1'>$" + cost + "</span></li><br>";
         }
     });
 
+
+    /* FIRST TOPPING IS FREE */
+    total -= 1;
+
+    if (count >= 5) {
+        total -= 1;
+        $("#specialDeal").removeClass("hidden");
+    } else {
+        $("#specialDeal").addClass("hidden");
+    }
+
     content += "</ul>";
+
+    console.log(content);
+
+    list.innerHTML = content;
+
+    listTotal.innerHTML = "<p>Total: $" + total + "</p>"
+    total += parseFloat(cost);
 
     list.innerHTML = content;
 }
