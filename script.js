@@ -10,7 +10,7 @@ var ctx = canvas.getContext("2d");
 request.open("GET", "jsonfile.json", false);
 request.send(null);
 var my_JSON_object = JSON.parse(request.responseText);
-console.log(my_JSON_object);
+//console.log(my_JSON_object);
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -39,10 +39,10 @@ function addTheToppings() {
         i,
         cost;
     $.each($(".topping"), function (index, value) {
-        console.log(value.value);
+        //console.log(value.value);
         if (value.value !== "none") {
             count++;
-            console.log(value.name);
+            //console.log(value.name);
             for (i = 0; i < my_JSON_object.toppings.length; i++) {
                 if (capitalizeFirstLetter(my_JSON_object.toppings[i].name) === value.name) {
                     cost = my_JSON_object.toppings[i].price;
@@ -50,11 +50,11 @@ function addTheToppings() {
                     images.concat(my_JSON_object.toppings[i].image);
 
                     if (/[a-z]*3/.test(value.value.toString())) {
-                        console.log("value was full");
+                        //console.log("value was full");
                         ctx.drawImage(document.getElementById(value.name + "Image"), 10, 10, canvas.width - 20, canvas.height - 20);
                     } else if (/[a-z]*1/.test(value.value.toString())) {
                         //left
-                        console.log(value.value);
+                        //console.log(value.value);
                         ctx.drawImage(document.getElementById(value.name + "HalfImage"), 10, 10, canvas.width - 20, canvas.height - 20);
                     } else {
                         ctx.save();
@@ -89,7 +89,7 @@ function addTheToppings() {
                     i = my_JSON_object.toppings.length + 1;
                 }
             }
-            content += "<li>" + value.name + "<span>$" + cost + "</span></li>";
+            content += "<li>" + value.name + "<span id='span1'>$" + cost + "</span></li>";
 
 
             /* FIRST TOPPING IS FREE */
@@ -118,8 +118,8 @@ function addTheToppings() {
 
 (function (data) {
     //    $("#innerList").addClass("hidden");
-    console.log("JSON: ");
-    console.log(data);
+    //console.log("JSON: ");
+    //console.log(data);
     var i, content = "",
         imgs = "",
         topName;
@@ -137,10 +137,10 @@ function addTheToppings() {
         imgs += "<img id='" + topName + "HalfImage' src='" + data.toppings[i].imageHalf + "' />";
 
         if (i % 2 === 0) {
-            //            console.log("topping goes on the left");
+            //            //console.log("topping goes on the left");
             $("#pt1").append(content);
         } else {
-            //            console.log("topping goes on the right");
+            //            //console.log("topping goes on the right");
             $("#pt2").append(content);
         }
 
@@ -160,9 +160,23 @@ $(".topping").change(function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     addTheSauce();
     addTheToppings();
-    console.log("topping was changed");
+    //console.log("topping was changed");
 });
 
+
+//
+//function img_create(src, answer, id) {
+//    if (answer === 'keep') {
+//        var elem = document.createElement("img");
+//        elem.src = src;
+//        elem.setAttribute("height", "410");
+//        elem.setAttribute("width", "375");
+//        elem.setAttribute('class', 'images');
+//        elem.setAttribute('id', id)
+//        document.getElementById("kindaCanvas").appendChild(elem);
+//    }
+//
+//}
 
 function next() {
     location.href = "http://www.whistlerwag.com/wp-content/uploads/2015/03/thank-you-clothesline-752x483.jpg";
