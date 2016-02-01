@@ -60,28 +60,6 @@ function addTheToppings() {
                         ctx.save();
                         ctx.translate(canvas.width, canvas.height); // change origin
                         ctx.rotate(Math.PI);
-                        //                            ctx.drawImage(link, x, y, 20, 20); // draws a chain link or dagger
-                        //                            ctx.restore();
-                        //                        context.clearRect(0, 0, canvas.width, canvas.height);
-                        //
-                        //                        // save the unrotated context of the canvas so we can restore it later
-                        //                        // the alternative is to untranslate & unrotate after drawing
-                        //                        context.save();
-                        //
-                        //                        // move to the center of the canvas
-                        //                        context.translate(canvas.width / 2, canvas.height / 2);
-                        //
-                        //                        // rotate the canvas to the specified degrees
-                        //                        context.rotate(degrees * Math.PI / 180);
-                        //
-                        //                        // draw the image
-                        //                        // since the context is rotated, the image will be rotated also
-                        //                        context.drawImage(image, -image.width / 2, -image.width / 2);
-                        //
-                        //                        // we’re done with the rotating so restore the unrotated context
-                        //                        context.restore();
-
-
                         ctx.drawImage(document.getElementById(value.name + "HalfImage"), 10, 10, canvas.width - 20, canvas.height - 20);
                         ctx.restore()
                     }
@@ -89,29 +67,30 @@ function addTheToppings() {
                     i = my_JSON_object.toppings.length + 1;
                 }
             }
-            content += "<li>" + value.name + "<span id='span1'>$" + cost + "</span></li>";
-
-
-            /* FIRST TOPPING IS FREE */
-            total -= 1;
-
-            if (count >= 5) {
-                total -= 1;
-                $("#specialDeal").removeClass("hidden");
-            } else {
-                $("#specialDeal").addClass("hidden");
-            }
-
-            content += "</ul>";
-
-            list.innerHTML = content;
-
-            listTotal.innerHTML = "<p>Total: $" + total + "</p>"
-            total += parseFloat(cost);
+            content += "<li>" + value.name + "<span id='span1'>$" + cost + "</span></li><br>";
         }
     });
 
+
+    /* FIRST TOPPING IS FREE */
+    if (count > 0)
+        total -= 1;
+
+    if (count >= 5) {
+        total -= 1;
+        $("#specialDeal").removeClass("hidden");
+    } else {
+        $("#specialDeal").addClass("hidden");
+    }
+
     content += "</ul>";
+
+    console.log(content);
+
+    list.innerHTML = content;
+
+    listTotal.innerHTML = "<p>Total: $" + total + "</p>"
+    total += parseFloat(cost);
 
     list.innerHTML = content;
 }
@@ -126,7 +105,7 @@ function addTheToppings() {
     for (i = 0; i < data.toppings.length; i++) {
         topName = capitalizeFirstLetter(data.toppings[i].name);
         content = "<label for '" + topName + "'>" + topName + ":</label>";
-        content += "<select name='" + topName + "' id='" + topName + "' class='topping'>";
+        content += "<select name='" + topName + "' id='" + topName.replace(/ /g, '') + "' class='topping'>";
         content += "<option value='none'>none</option>";
         content += "<option value='" + data.toppings[i].name + "1'>left</option>";
         content += "<option value='" + data.toppings[i].name + "2'>right</option>";
@@ -150,7 +129,7 @@ function addTheToppings() {
     $("#images").hide();
 }(my_JSON_object));
 
-$(".sauceButton").on('click', function () {
+$(".sauceButton").change(function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     addTheSauce();
     addTheToppings();
@@ -163,37 +142,81 @@ $(".topping").change(function () {
     //console.log("topping was changed");
 });
 
+$(".specialty").on('click', function () {
+    console.log(this.id);
+    switch (this.id) {
+    case "bbqChickenPizza":
+        $("input[name=radio2][value=" + 1 + "]").prop('checked', true);
+        $("#Cheese").prop('selectedIndex', 3);
+        $("#Pepperoni").prop('selectedIndex', 0);
+        $("#Sausage").prop('selectedIndex', 0);
+        $("#Pineapple").prop('selectedIndex', 0);
+        $("#Bacon").prop('selectedIndex', 0);
+        $("#Blackolives").prop('selectedIndex', 0);
+        $("#Mushrooms").prop('selectedIndex', 0);
+        $("#Greenpeppers").prop('selectedIndex', 0);
+        $("#Onions").prop('selectedIndex', 0);
+        $("#Chicken").prop('selectedIndex', 3);
+        break;
+    case "spicyItalian":
+        $("input[name=radio2][value=" + 2 + "]").prop('checked', true);
+        $("#Cheese").prop('selectedIndex', 3);
+        $("#Pepperoni").prop('selectedIndex', 3);
+        $("#Sausage").prop('selectedIndex', 3);
+        $("#Pineapple").prop('selectedIndex', 0);
+        $("#Bacon").prop('selectedIndex', 0);
+        $("#Blackolives").prop('selectedIndex', 0);
+        $("#Mushrooms").prop('selectedIndex', 0);
+        $("#Greenpeppers").prop('selectedIndex', 0);
+        $("#Onions").prop('selectedIndex', 0);
+        $("#Chicken").prop('selectedIndex', 0);
+        break;
+    case "worksPizza":
+        $("input[name=radio2][value=" + 2 + "]").prop('checked', true);
+        $("#Cheese").prop('selectedIndex', 3);
+        $("#Pepperoni").prop('selectedIndex', 3);
+        $("#Sausage").prop('selectedIndex', 3);
+        $("#Pineapple").prop('selectedIndex', 3);
+        $("#Bacon").prop('selectedIndex', 3);
+        $("#Blackolives").prop('selectedIndex', 3);
+        $("#Mushrooms").prop('selectedIndex', 3);
+        $("#Greenpeppers").prop('selectedIndex', 3);
+        $("#Onions").prop('selectedIndex', 3);
+        $("#Chicken").prop('selectedIndex', 3);
+        break;
+    case "veggiePizza":
+        $("input[name=radio2][value=" + 2 + "]").prop('checked', true);
+        $("#Cheese").prop('selectedIndex', 3);
+        $("#Pepperoni").prop('selectedIndex', 0);
+        $("#Sausage").prop('selectedIndex', 0);
+        $("#Pineapple").prop('selectedIndex', 3);
+        $("#Bacon").prop('selectedIndex', 0);
+        $("#Blackolives").prop('selectedIndex', 3);
+        $("#Mushrooms").prop('selectedIndex', 3);
+        $("#Greenpeppers").prop('selectedIndex', 3);
+        $("#Onions").prop('selectedIndex', 3);
+        $("#Chicken").prop('selectedIndex', 0);
+        break;
+    case "meatLoverPizza":
+        $("input[name=radio2][value=" + 2 + "]").prop('checked', true);
+        $("#Cheese").prop('selectedIndex', 3);
+        $("#Pepperoni").prop('selectedIndex', 3);
+        $("#Sausage").prop('selectedIndex', 3);
+        $("#Pineapple").prop('selectedIndex', 0);
+        $("#Bacon").prop('selectedIndex', 3);
+        $("#Blackolives").prop('selectedIndex', 0);
+        $("#Mushrooms").prop('selectedIndex', 0);
+        $("#Greenpeppers").prop('selectedIndex', 0);
+        $("#Onions").prop('selectedIndex', 0);
+        $("#Chicken").prop('selectedIndex', 3);
+        break;
+    }
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    addTheSauce();
+    addTheToppings();
+});
 
-//
-//function img_create(src, answer, id) {
-//    if (answer === 'keep') {
-//        var elem = document.createElement("img");
-//        elem.src = src;
-//        elem.setAttribute("height", "410");
-//        elem.setAttribute("width", "375");
-//        elem.setAttribute('class', 'images');
-//        elem.setAttribute('id', id)
-//        document.getElementById("kindaCanvas").appendChild(elem);
-//    }
-//
-//}
 
 function next() {
     location.href = "http://www.whistlerwag.com/wp-content/uploads/2015/03/thank-you-clothesline-752x483.jpg";
 }
-/* FIRST TOPPING IS FREE */
-//total -= 1;
-//
-//if (count >= 5) {
-//    total -= 1;
-//    $("#specialDeal").removeClass("hidden");
-//} else {
-//    $("#specialDeal").addClass("hidden");
-//}
-//
-//content += "</ul>";
-//
-//list.innerHTML = content;
-//
-//listTotal.innerHTML = "<p>Total: $" + total + "</p>"
-//});
