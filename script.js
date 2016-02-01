@@ -17,8 +17,16 @@ function capitalizeFirstLetter(string) {
 }
 
 function addTheSauce() {
-    console.log($('[name=radio2]:checked').val());
-//    alert($("input[name=q12_3]:checked").val());
+    var valu = $('[name=radio2]:checked').val();
+    if (parseFloat(valu) !== 3) {
+        if (parseFloat(valu) === 1) {
+            //BBQ
+            ctx.drawImage(document.getElementById("BBQ"), 10, 10, canvas.width - 20, canvas.height - 20);
+        } else {
+            //Reg
+            ctx.drawImage(document.getElementById("REG"), 10, 10, canvas.width - 20, canvas.height - 20);
+        }
+    }
 }
 
 function addTheToppings() {
@@ -141,6 +149,12 @@ function addTheToppings() {
 
     $("#images").hide();
 }(my_JSON_object));
+
+$(".sauceButton").on('click', function () {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    addTheSauce();
+    addTheToppings();
+});
 
 $(".topping").change(function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
