@@ -26,6 +26,10 @@
         border-radius: 20px;
         padding-top: 10px;
         padding-bottom: 10px;
+        font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+        font-size: 15px;
+        font-weight: bold;
+        
     }
     
     #list {
@@ -37,6 +41,8 @@
         border-radius: 20px;
         padding-top: 10px;
         padding-bottom: 10px;
+        font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+        font-weight: bold;
     }
     
     #pizza {
@@ -62,6 +68,7 @@
         height: 50px;
         width: 100%;
         margin: 0 auto;
+        
     }
     
     #centerwrapper {
@@ -82,7 +89,8 @@
         float: left;
         display: flex;
         align-items: center;
-        font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+        font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+        font-weight: bold;
         cursor: pointer;
     }
     
