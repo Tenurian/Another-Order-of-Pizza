@@ -73,7 +73,8 @@ function addTheToppings() {
 
 
     /* FIRST TOPPING IS FREE */
-    total -= 1;
+    if (count > 0)
+        total -= 1;
 
     if (count >= 5) {
         total -= 1;
