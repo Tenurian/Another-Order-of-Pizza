@@ -135,6 +135,10 @@ body {
     margin: auto;
 }
 
+h3 {
+    text-align: center;
+}
+
 #logo {
     background-image: url(images/updatedLogo.png);
     height: 91px;
