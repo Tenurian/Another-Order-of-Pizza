@@ -5,11 +5,10 @@
 }
 
 body {
-    background-image: url(images/back.jpg);
-/*    background-repeat: no-repeat;*/
-    background-repeat:repeat;
+    background-image: url(images/black-texture-wallpaper-background-pb0e.jpg);
+    background-repeat: no-repeat;
     background-attachment:fixed;
-    background-position: left top;
+    background-position: center top;
     position:absolute;
     height:100%;
     width: ?px;
@@ -314,7 +313,7 @@ label:hover input[type="radio"] + span {
 #listTotal {
 /*    padding-top:10px;*/
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     width: 50%;
     text-align: center;
 }
