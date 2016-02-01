@@ -25,9 +25,9 @@ function capitalizeFirstLetter(string) {
         content = "<label for '" + topName + "'>" + topName + ":</label>";
         content += "<select name='" + topName + "' id='" + topName + "' class='topping'>";
         content += "<option value='none'>none</option>";
-        content += "<option value='left'>left</option>";
-        content += "<option value='right'>right</option>";
-        content += "<option value='full'>full</option>";
+        content += "<option value='" + data.toppings[i].name + "1'>left</option>";
+        content += "<option value='" + data.toppings[i].name + "2'>right</option>";
+        content += "<option value='" + data.toppings[i].name + "3'>full</option>";
         content += "</select><br>";
 
         if (i % 2 === 0) {
@@ -68,6 +68,8 @@ $(".topping").change(function () {
 
     list.innerHTML = content;
 });
+
+document.getElementById("productclass").value = "7";
 
 /* FIRST TOPPING IS FREE */
 //total -= 1;
