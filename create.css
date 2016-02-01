@@ -191,44 +191,39 @@ body {
 span {
     float: right;
     padding-right: 25px;
+    color: rgb(242, 103, 34);
 }
 
+
+}
 #pizzaSizes {
     text-align: center;
 }
-
 #sauces {
     text-align: center;
     width: 100%;
 }
-
 #pizzaSauce {
     display: inline;
     width: 100%;
 }
-
-span {
+#span1 {
     text-align: center;
     color: rgb(242, 103, 34);
 }
-
 fieldset {
     border: 0px;
     width: 300px;
     margin: auto;
 }
-
 label {
     color: black;
 }
 
-
 /*radio button*/
-
 input[type="radio"] {
     display: none;
 }
-
 input[type="radio"] + span {
     background-color: #fefefe;
     border: 1px solid;
@@ -239,19 +234,15 @@ input[type="radio"] + span {
     padding: 7px;
     -webkit-appearance: none;
 }
-
 input[type="radio"]:checked + span {
     color: white;
     background-color: rgb(57, 128, 60);
 }
-
 label:hover input[type="radio"] + span {
     border-color: rgb(242, 103, 34);
 }
 
-
 /*bottom border*/
-
 .borderBot {
     border-bottom: 2px solid orange;
     width: 280px;
@@ -260,9 +251,7 @@ label:hover input[type="radio"] + span {
     border-style: dotted;
 }
 
-
 /*optionsbox*/
-
 #toppingSelect select {
     margin-bottom: 10px;
     background-color: #fefefe;
@@ -273,7 +262,6 @@ label:hover input[type="radio"] + span {
     margin-right: 30px;
     padding: 7px;
 }
-
 #toppingSelect label {
     margin-right: 10px;
     width: 110px;
@@ -282,9 +270,7 @@ label:hover input[type="radio"] + span {
     vertical-align: middle;
 }
 
-
 /*list*/
-
 #submit {
     height: 30px;
     width: 90px;
@@ -298,17 +284,14 @@ label:hover input[type="radio"] + span {
     left: 135px;
     cursor: pointer;
 }
-
 #submit h4 {
     margin: auto;
     cursor: pointer;
 }
-
 #specialDeal {
     margin-top: 5px;
     text-align: center;
 }
-
 #specialDeal h4 {
     color: black;
     display: inline-block;
@@ -318,12 +301,11 @@ label:hover input[type="radio"] + span {
     border-radius: 15px;
     margin: 3px auto;
 }
-
 .hidden {
     visibility: hidden;
 }
-
 #innerList {
+    padding-bottom: 20px;
     color: black;
     width: 75%;
     margin: 10px auto;
@@ -331,13 +313,11 @@ label:hover input[type="radio"] + span {
     border: 3px solid rgb(242, 103, 34);
     border-radius: 20px;
 }
-
 #innerList h3 {
     text-align: center;
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
-
 #listTotal {
     width: 100%;
     text-align: center;
@@ -346,25 +326,20 @@ label:hover input[type="radio"] + span {
     height: 40px;
 }
 
-
 /*topping applying*/
-
 #kindaCanvas {
     margin-left: 80px;
     width: 400px;
     height: 440px;
 }
-
 .images {
     position: absolute;
     z-index: 10;
 }
-
 #images {
     visibility: hidden;
     overflow: hidden;
 }
-
 #myCanvas {
     border: 0px solid red;
     width: 100%;

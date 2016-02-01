@@ -164,20 +164,6 @@ $(".topping").change(function () {
 });
 
 
-//
-//function img_create(src, answer, id) {
-//    if (answer === 'keep') {
-//        var elem = document.createElement("img");
-//        elem.src = src;
-//        elem.setAttribute("height", "410");
-//        elem.setAttribute("width", "375");
-//        elem.setAttribute('class', 'images');
-//        elem.setAttribute('id', id)
-//        document.getElementById("kindaCanvas").appendChild(elem);
-//    }
-//
-//}
-
 function next() {
     location.href = "http://www.whistlerwag.com/wp-content/uploads/2015/03/thank-you-clothesline-752x483.jpg";
 }
