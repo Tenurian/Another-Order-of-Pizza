@@ -135,6 +135,10 @@ body {
     margin: auto;
 }
 
+h3 {
+    text-align: center;
+}
+
 #logo {
     background-image: url(images/updatedLogo.png);
     height: 91px;
@@ -225,6 +229,7 @@ input[type="radio"] {
     display: none;
 }
 input[type="radio"] + span {
+    cursor: pointer;
     background-color: #fefefe;
     border: 1px solid;
     border-color: #ccc #fff #fff #ccc;
@@ -253,6 +258,7 @@ label:hover input[type="radio"] + span {
 
 /*optionsbox*/
 #toppingSelect select {
+    cursor: pointer;
     margin-bottom: 10px;
     background-color: #fefefe;
     border: 1px solid;
