@@ -89,7 +89,7 @@ function addTheToppings() {
 
     list.innerHTML = content;
 
-    listTotal.innerHTML = "<p>Total: $" + total + "</p>"
+    listTotal.innerHTML = "<p>Total: $" + (total+10) + "</p>"
     total += parseFloat(cost);
 
     list.innerHTML = content;
